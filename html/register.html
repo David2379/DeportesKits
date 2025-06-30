@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Registro</title>
+  <link rel="stylesheet" href="../css/register.css" />
+</head>
+<canvas id="bg-particles"></canvas>
+<body>
+
+  <div class="container">
+    <div class="form-toggle">
+      <button onclick="showLogin()">Iniciar Sesión</button>
+      <button onclick="showRegister()">Registrarse</button>
+    </div>
+
+    <div class="form-container">
+      <!-- FORMULARIO LOGIN -->
+      <form action="../php/estilo.php" method="POST" class="form login-form" id="login-form">
+        <h2>Iniciar Sesión</h2>     
+<input type="hidden" name="action" value="login" />
+        <input type="text" name="nombre" placeholder="Usuario" required />
+        <input type="password" name="Contraseña" placeholder="Contraseña" required />
+        <button type="submit">Entrar</button>
+      </form>
+
+      <!-- FORMULARIO REGISTRO -->
+      <form action="../php/estilo.php" method="POST" class="form register-form" id="register-form" style="display:none;">
+        <h2>Registrarse</h2>
+<input type="hidden" name="action" value="register" />
+        <input type="text" name="nombre" placeholder="nombre" required />
+        <input type="email" name="email" placeholder="Correo" required />
+        <input type="telefono" name="telefono" placeholder="telefono" required>
+        <input type="direccion" name="direccion" placeholder="direccion" required>
+        <input type="ciudad" name="ciudad" placeholder="ciudad" required>
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <input type="password" name="confirm_password" placeholder="Repetir Contraseña" required />
+        <button type="submit">Crear Cuenta</button>
+      </form>
+    </div>
+  </div>
+
+   <script src="../js/register.js"></script>
+</body>
+</html>
